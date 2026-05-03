@@ -1,0 +1,84 @@
+            ┌───────────────┐
+            │     START     │
+            └───────┬───────┘
+                    │
+                    ▼
+        ┌──────────────────────┐
+        │ Initialize head=NULL │
+        │ current=NULL         │
+        └────────┬─────────────┘
+                 │
+                 ▼
+        ┌──────────────────────┐
+        │     DISPLAY MENU     │
+        │ 1.Add 2.Display ...  │
+        └────────┬─────────────┘
+                 │
+                 ▼
+        ┌──────────────────────┐
+        │   Read User Choice   │
+        └────────┬─────────────┘
+                 │
+     ┌───────────┼───────────────────────────────┐
+      │           │           │         │         │
+     ▼           ▼           ▼         ▼         ▼
+
+┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐
+│ Add Song │ │ Display  │ │ Next     │ │ Previous │ │ Delete   │
+└────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘
+       │              │            │            │             │
+       ▼              ▼            ▼            ▼            ▼
+
+[Create Node]   [Traverse]   Is next?     Is prev?     Search node
+     │              │        /     \      /     \       /      \
+     ▼              ▼      No      Yes   No     Yes   Not     Found
+Is head NULL?   Print list   │       │     │      │   Found      │
+   /    \                     │       │     │      │    │         ▼
+ Yes    No                    ▼       ▼     ▼      ▼    ▼   Adjust links
+  │      │               Print msg  Move   Print  Move  Print   Delete
+  ▼      ▼                          next   msg    prev  msg      │
+Set head  Traverse to end                                          ▼
+= new     │                                                       Update current
+node      ▼
+        Insert node
+     (update links)
+
+---------------------------------------------------------
+
+        ┌──────────────────────┐
+        │   Search Song        │
+        └────────┬─────────────┘
+                 ▼
+        Traverse list
+            │
+     Found? / \
+         Yes  No
+          │    │
+          ▼    ▼
+     Print pos  Print not found
+
+---------------------------------------------------------
+
+        ┌──────────────────────┐
+        │ Current Song         │
+        └────────┬─────────────┘
+                 ▼
+        Is current NULL?
+            /      \
+          Yes      No
+           │        │
+           ▼        ▼
+     Print "None"  Print song
+
+---------------------------------------------------------
+
+                 ▼
+        ┌──────────────────────┐
+        │ Exit Selected?       │
+        └────────┬─────────────┘
+                 │
+           Yes /   \ No
+              ▼     │
+        ┌────────┐  │
+        │  STOP  │◄─┘
+        └────────┘
