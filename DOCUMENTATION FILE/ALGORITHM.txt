@@ -1,0 +1,141 @@
+MUSIC PLAYLIST MANAGER – ALGORITHM (USING DOUBLY LINKED LIST)
+
+1. START
+
+2. DEFINE a structure Node:
+   
+   - song (string)
+   - next pointer
+   - prev pointer
+
+3. INITIALIZE:
+   
+   - head = NULL
+   - current = NULL
+
+---
+
+4. ADD SONG (name)
+
+---
+
+1. Create a new node with given song name
+2. If head is NULL:
+   a. Set head = new node
+   b. Set current = head
+3. Else:
+   a. Traverse to last node
+   b. Set last->next = new node
+   c. Set new node->prev = last
+4. END
+
+---
+
+5. DISPLAY PLAYLIST
+
+---
+
+1. Set temp = head
+2. While temp != NULL:
+   a. Print temp->song
+   b. Move temp = temp->next
+3. END
+
+---
+
+6. PLAY NEXT SONG
+
+---
+
+1. If current == NULL OR current->next == NULL:
+   a. Print "No next song"
+2. Else:
+   a. Set current = current->next
+   b. Print current song
+3. END
+
+---
+
+7. PLAY PREVIOUS SONG
+
+---
+
+1. If current == NULL OR current->prev == NULL:
+   a. Print "No previous song"
+2. Else:
+   a. Set current = current->prev
+   b. Print current song
+3. END
+
+---
+
+8. DELETE SONG (name)
+
+---
+
+1. Set temp = head
+2. Traverse list until song is found
+3. If temp == NULL:
+   a. Print "Song not found"
+4. Else:
+   a. If temp == head:
+   head = temp->next
+   b. If temp->next != NULL:
+   temp->next->prev = temp->prev
+   c. If temp->prev != NULL:
+   temp->prev->next = temp->next
+   d. If current == temp:
+   current = temp->next
+   e. Delete temp
+   f. Print "Deleted successfully"
+5. END
+
+---
+
+9. SEARCH SONG (name)
+
+---
+
+1. Set temp = head, position = 1
+2. While temp != NULL:
+   a. If temp->song == name:
+   Print position
+   Exit
+   b. Move temp = temp->next
+   c. Increment position
+3. If not found:
+   Print "Song not found"
+4. END
+
+---
+
+10. DISPLAY CURRENT SONG
+
+---
+
+1. If current != NULL:
+   Print current->song
+2. Else:
+   Print "No song playing"
+3. END
+
+---
+
+11. MAIN MENU
+
+---
+
+1. Repeat until user exits:
+   a. Display options:
+   1. Add Song
+   2. Display Playlist
+   3. Next Song
+   4. Previous Song
+   5. Delete Song
+   6. Search Song
+   7. Current Song
+   8. Exit
+   b. Read user choice
+   c. Call corresponding function
+
+2. STOP

@@ -1,0 +1,63 @@
+🎵 METHODOLOGY – MUSIC PLAYLIST MANAGER
+
+The Music Playlist Manager is developed using a step-by-step approach to implement a real-world application of a Doubly Linked List in C++. The methodology focuses on designing, implementing, and testing the system in a structured manner.
+
+1. Requirement Analysis
+
+First, the basic requirements of the system were identified. The application should allow users to add songs, delete songs, search for songs, display the playlist, and navigate between songs. The system should also maintain the currently playing song.
+
+2. Data Structure Selection
+
+A Doubly Linked List was chosen as the core data structure because it supports dynamic memory allocation and allows traversal in both forward and backward directions. This is essential for playlist navigation (next and previous operations).
+
+3. System Design
+
+Each song is represented as a node containing:
+
+- Song name
+- Pointer to next node
+- Pointer to previous node
+
+Two main pointers are used:
+
+- "head" → points to the first node
+- "current" → tracks the currently playing song
+
+4. Implementation
+
+The system is implemented in C++ using a modular approach. Separate functions are created for each operation:
+
+- Adding a song
+- Deleting a song
+- Displaying the playlist
+- Searching for a song
+- Moving to next and previous songs
+- Displaying the current song
+
+A menu-driven interface is used to interact with the user.
+
+5. Algorithm Execution
+
+Each operation follows standard linked list procedures:
+
+- Insertion at the end for adding songs
+- Traversal for searching and displaying
+- Pointer adjustment for deletion
+- Updating the current pointer for navigation
+
+6. Testing
+
+The program is tested with different inputs to ensure:
+
+- Correct insertion and deletion
+- Proper navigation between songs
+- Accurate search results
+- Stability when playlist is empty or has one song
+
+7. Result
+
+The system successfully manages a playlist dynamically and allows smooth navigation using linked list operations.
+
+---
+
+This methodology ensures that the project is well-structured, efficient, and easy to understand, while clearly demonstrating the practical use of data structures.

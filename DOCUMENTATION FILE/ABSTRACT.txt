@@ -1,0 +1,9 @@
+🎵 ABSTRACT – MUSIC PLAYLIST MANAGER
+
+The Music Playlist Manager is a console-based application developed in C++ that demonstrates the implementation of a Doubly Linked List data structure in a practical scenario. The system is designed to manage a collection of songs and simulate the basic operations of a music player, including adding, deleting, searching, and navigating through songs.
+
+In this project, each song is represented as a node in a doubly linked list, allowing efficient traversal in both forward and backward directions. This makes it suitable for playlist navigation, where users frequently move to the next or previous song. A pointer is maintained to track the currently playing song, ensuring smooth and continuous interaction.
+
+The application follows a menu-driven approach, making it simple and user-friendly. It also highlights the advantages of dynamic memory allocation over static structures like arrays, especially in handling data that changes in size.
+
+Overall, this project provides a clear understanding of linked lists, pointer manipulation, and dynamic data handling in C++. It serves as a foundation for building more advanced systems by incorporating additional features such as shuffle, repeat mode, and persistent storage.
